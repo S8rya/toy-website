@@ -144,6 +144,17 @@ body {
   background-color: var(--primary-color);
   padding: var(--nav-padding);
   color: var(--background-white);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: top 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.navbar-hidden {
+  top: -70px; /* Adjusted based on typical navbar height */
+  box-shadow: none;
 }
 
 .logo {
@@ -174,6 +185,20 @@ body {
   border: none;
   outline: none;
   font-size: var(--font-size-xs);
+  transition: all 0.3s ease; /* Smooth transition for all changes */
+}
+
+.search-bar input:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly lighter on hover */
+  transform: scale(1.02); /* Slightly enlarge on hover */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.search-bar input:focus {
+  background-color: var(--background-white); /* White when focused */
+  transform: scale(1.02); /* Keep enlarged when focused */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow when focused */
+  border: 1px solid var(--primary-color); /* Add a primary color border when focused */
 }
 
 /* ==================== BREADCRUMB ==================== */
@@ -566,7 +591,7 @@ body {
   margin-bottom: var(--space-xl);
   color: var(--primary-color);
 }
-can 
+ 
 .product-carousel-container {
   display: flex;
   justify-content: center;

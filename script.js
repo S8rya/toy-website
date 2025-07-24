@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Setup functions that run on all pages
   setupScrollTopButton();
   setupWhatsAppButtons(CONFIG);
+  setupNavbarScrollBehavior();
 
   // Page-specific setups
   if (document.body.classList.contains("home-page")) {
@@ -72,6 +73,25 @@ function setupWhatsAppButtons(CONFIG) {
       // Use number from CONFIG object
       window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${message}`, "_blank");
     }
+  });
+}
+
+function setupNavbarScrollBehavior() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+
+  let lastScrollY = window.scrollY;
+  const scrollThreshold = 50; // Pixels to scroll before hiding/showing
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY && window.scrollY > navbar.offsetHeight + scrollThreshold) {
+      // Scrolling down and past the navbar height + threshold
+      navbar.classList.add('navbar-hidden');
+    } else if (window.scrollY < lastScrollY - scrollThreshold || window.scrollY < navbar.offsetHeight) {
+      // Scrolling up or near the top of the page
+      navbar.classList.remove('navbar-hidden');
+    }
+    lastScrollY = window.scrollY;
   });
 }
 
