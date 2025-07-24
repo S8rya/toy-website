@@ -97,6 +97,7 @@ body {
   color: var(--text-primary);
   background-color: var(--background-white);
   line-height: 1.6;
+  padding-top: 70px; /* Adjust based on your navbar height */
 }
 
 /* ==================== UTILITY CLASSES ==================== */
@@ -160,6 +161,8 @@ body {
 .logo {
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
+  color: var(--background-white); /* Ensure logo color is white */
+  text-decoration: none; /* Remove underline */
 }
 
 .nav-links {
