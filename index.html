@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toy World</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="home-page">
+
+  <!-- Navigation Bar -->
+ <nav class="navbar">
+  <div class="logo">Toy World</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+      <a href="products.html" class="dropbtn">Products</a>
+      <div class="dropdown-content">
+        <div class="dropdown-column">
+          <strong>Shop by Age</strong>
+          <a href="products.html?age=0-12">👶 0–12 months</a>
+          <a href="products.html?age=1-2">🧒 1–2 years</a>
+          <a href="products.html?age=3-5">👦 3–5 years</a>
+          <a href="products.html?age=6plus">👧 6+ years</a>
+        </div>
+        <div class="dropdown-column">
+          <strong>Shop by Price</strong>
+          <a href="products.html?price=0-299">💰 Under ₹299</a>
+          <a href="products.html?price=300-499">💸 ₹300 – ₹499</a>
+          <a href="products.html?price=500-799">🛍 ₹500 – ₹799</a>
+          <a href="products.html?price=800plus">🎁 ₹800+</a>
+        </div>
+      </div>
+    </li>
+
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search toys..." id="homeSearchInput" />
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="carousel">
+      <button class="arrow left" aria-label="Previous">&#10094;</button>
+      <img id="carousel-img" src="images/hero1.jpg" alt="Featured Toy" />
+      <div class="carousel-dots" id="carousel-dots"></div>
+      <button class="arrow right" aria-label="Next">&#10095;</button>
+    </div>
+    <div class="hero-text">
+      <h1>Welcome to Toy World</h1>
+      <p>Creative & Safe Toys for Curious Minds</p>
+      <a href="#products"><button>Explore Now</button></a>
+    </div>
+  </header>
+
+  <!-- Shop by Age section -->
+<section class="shop-by-age" data-aos="fade-up">
+  <h2>🧸 Shop by Age</h2>
+  <div class="age-grid">
+    <a href="products.html?age=0-12" class="age-card age-card--0">
+      <img src="images/hero1.jpg" alt="0–12 months">
+      <h3>🍼 0–12 Months</h3>
+      <span class="shop-now-text">Shop Now</span>
+    </a>
+    <a href="products.html?age=1-2" class="age-card age-card--1">
+      <img src="images/hero1.jpg" alt="1–2 years">
+      <h3>🚼 1–2 Years</h3>
+      <span class="shop-now-text">Shop Now</span>
+    </a>
+    <a href="products.html?age=3-5" class="age-card age-card--2">
+      <img src="images/hero1.jpg" alt="3–5 years">
+      <h3>🧩 3–5 Years</h3>
+      <span class="shop-now-text">Shop Now</span>
+    </a>
+    <a href="products.html?age=6plus" class="age-card age-card--3">
+      <img src="images/hero1.jpg" alt="6+ years">
+      <h3>🦖 6+ Years</h3>
+      <span class="shop-now-text">Shop Now</span>
+    </a>
+  </div>
+</section>
+
+  <!-- Shop by Price section -->
+ <section class="shop-by-price" data-aos="fade-up">
+  <h2>💰 Shop by Price</h2>
+  <div class="price-grid">
+    <a href="products.html?price=0-299" class="price-card price-card--0">
+      <img src="images/hero1.jpg" alt="Under ₹299">
+      <h3>🎁 ₹0 – ₹299</h3>
+      <span class="shop-now-text">Shop Now</span>
+    </a>
+    <a href="products.html?price=300-499" class="price-card price-card--1">
+      <img src="images/hero1.jpg" alt="₹300 – ₹499">
+      <h3>✨ ₹300 – ₹499</h3>
+      <span class="shop-now-text">Shop Now</span>
+    </a>
+    <a href="products.html?price=500-799" class="price-card price-card--2">
+      <img src="images/hero1.jpg" alt="₹500 – ₹799">
+      <h3>🌈 ₹500 – ₹799</h3>
+      <span class="shop-now-text">Shop Now</span>
+    </a>
+    <a href="products.html?price=800plus" class="price-card price-card--3">
+      <img src="images/hero1.jpg" alt="₹800+">
+      <h3>🌟 ₹800+</h3>
+      <span class="shop-now-text">Shop Now</span>
+    </a>
+  </div>
+</section> 
+
+  <!-- Product Section -->
+  <section id="products" class="product-section" data-aos="fade-up">
+    <h2>Our Featured Toys</h2>
+    <div class="product-carousel-container">
+      <div class="product-carousel" id="productCarousel">
+        <!-- Products will be injected here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Toy World. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Go to top">⮝</button>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

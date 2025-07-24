@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Toys - Toy World</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="products-page">
+  <nav class="navbar">
+    <div class="logo">Toy World</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="search-bar">
+      <input type="text" placeholder="Search toys..." id="searchInput" />
+    </div>
+    
+  </nav>
+    <nav class="breadcrumb" id="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <span class="current">Products</span>
+  </nav>
+
+  <section class="product-page">
+    <h2>Explore All Toys</h2>
+
+    <div class="products-container">
+      <!-- Sidebar Filter Panel -->
+      <aside class="filter-panel">
+        <h3>Sort By</h3>
+        <div class="sort-group">
+          <label><input type="radio" name="sort" value="default" checked /> Default</label>
+          <label><input type="radio" name="sort" value="price-asc" /> Price: Low to High</label>
+          <label><input type="radio" name="sort" value="price-desc" /> Price: High to Low</label>
+          <label><input type="radio" name="sort" value="name-asc" /> Name: A-Z</label>
+          <label><input type="radio" name="sort" value="name-desc" /> Name: Z-A</label>
+        </div>
+
+        <h3>Filter By</h3>
+        <div class="filter-group">
+          <div class="filter-header">
+            <span class="filter-title">Age</span>
+            <span class="filter-arrow">▼</span>
+          </div>
+        
+          <div class="filter-options">
+            <div class="overflow-wrapper"> <label><input type="checkbox" name="age" value="all" checked /> All Ages</label>
+              <label><input type="checkbox" name="age" value="0-12" /> 0–12 months</label>
+              <label><input type="checkbox" name="age" value="1-2" /> 1–2 years</label>
+              <label><input type="checkbox" name="age" value="3-5" /> 3–5 years</label>
+              <label><input type="checkbox" name="age" value="6+" /> 6+ years</label>
+            </div>
+          </div>
+        </div>
+      
+        <div class="filter-group">
+          <div class="filter-header">
+            <span class="filter-title">Price</span>
+            <span class="filter-arrow">▼</span>
+          </div>
+          <div class="filter-options">
+            <div class="overflow-wrapper"> <label><input type="checkbox" name="price" value="all" checked /> All
+                Prices</label>
+              <label><input type="checkbox" name="price" value="0-299" /> Under ₹299</label>
+              <label><input type="checkbox" name="price" value="3so00-499" /> ₹300 – ₹499</label>
+              <label><input type="checkbox" name="price" value="500-799" /> ₹500 – ₹799</label>
+              <label><input type="checkbox" name="price" value="800plus" /> ₹800+</label>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Product Grid -->
+      <div id="productGrid" class="product-grid" data-aos="fade-up">
+        <!-- Product cards will appear here -->
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleFilter(el) {
+      const group = el.closest(".filter-group");
+      group.classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
