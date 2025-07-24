@@ -164,7 +164,12 @@ async function setupHomeProducts() {
 async function setupProductPage() {
   const grid = document.getElementById("productGrid");
   const searchInput = document.getElementById("searchInput");
+  const loader = document.querySelector('.loader');
+
   if (!grid) return;
+
+  // Show loader
+  if(loader) loader.style.display = 'block';
 
   // Centralize all filter event listeners
   document.querySelectorAll(".filter-header").forEach(header => {
@@ -174,6 +179,10 @@ async function setupProductPage() {
   });
 
   const allProducts = await fetchProducts();
+  
+  // Hide loader
+  if(loader) loader.style.display = 'none';
+
   if (allProducts.length === 0) {
     grid.innerHTML = "<p>Unable to load products at this time.</p>";
     return;
