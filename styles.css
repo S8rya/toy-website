@@ -1,20 +1,30 @@
 /* ==================== CSS CUSTOM PROPERTIES ==================== */
 :root {
   /* Color Palette */
-  --primary-color: #ff4d6d;
-  --primary-hover: #ffe49b;
-  --secondary-hover: #bbd536;
-  --whatsapp-green: #25D366;
-  --text-primary: #333;
-  --text-secondary: #666;
-  --text-tertiary: #555;
-  --background-white: #fff;
-  --background-light: #fffafc;
-  --background-gradient-1: linear-gradient(to right, #fceff9, #fef6e4);
-  --background-gradient-2: linear-gradient(to bottom, #fff5f7, #fef6e4);
-  --background-gradient-3: linear-gradient(to bottom, #fff5f7, #fef6e4);
-  --filter-background: #fff0f4;
-  --filter-border: #ffdce5;
+  --primary-color: #ff3c38;          /* Vivid Coral Red */
+  --primary-hover: #ffb627;          /* Bright Amber */
+  --secondary-hover: #3c91e6;        /* Sky Blue */
+  --whatsapp-green: #25D366;        /* WhatsApp Standard Green */
+  
+  --text-primary: #222;              /* Deep Neutral for Strong Contrast */
+  --text-secondary: #555;            /* Secondary Text */
+  --text-tertiary: #777;             /* Tertiary Text */
+  
+  --background-white: #ffffff;       /* Pure White */
+  --background-light: #fff8f0;       /* Peach-Tinted White */
+  
+  --background-gradient-1: linear-gradient(to right, #ffecd2, #fcb69f);     /* Sunset Peach Gradient */
+  --background-gradient-2: linear-gradient(to bottom, #ffe2e2, #fad0c4);    /* Soft Blush Gradient */
+  --background-gradient-3: linear-gradient(to bottom, #fcd5ce, #fae1dd);    /* Blush Rose Gradient */
+  
+  --filter-background: #fff0f4;      /* Optional Light Pink Filter BG */
+  --filter-border: #ffdce5;          /* Optional Pastel Border for Filters */
+
+  --section-bg-age: #e0f7fa;         /* Cyan Tint – Fun for Age Filters */
+  --section-bg-price: #fff9c4;       /* Cheerful Soft Yellow */
+  --section-bg-products: #dcedc8;    /* Lush Lime Green – Toy List Section */
+
+
   
   /* Shadows */
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -391,7 +401,7 @@ body {
 /* ==================== SHOP BY AGE SECTION ==================== */
 .shop-by-age {
   padding: var(--section-padding);
-  background: radial-gradient(circle at 10% 20%, #fff5f7, #fceff9);
+  background: var(--section-bg-age);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -483,7 +493,7 @@ body {
 /* ==================== SHOP BY PRICE SECTION ==================== */
 .shop-by-price {
   padding: var(--section-padding);
-  background: radial-gradient(circle at 10% 20%, #fceff9, #fff5f7);
+  background: var(--section-bg-price);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -584,7 +594,7 @@ body {
 /* ==================== PRODUCT SECTION ==================== */
 .product-section {
   padding: var(--section-padding);
-  background: var(--background-gradient-2);
+  background: var(--section-bg-products);
   text-align: center;
 }
 
