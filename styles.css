@@ -34,8 +34,8 @@
   --shadow-dropdown: 0 8px 16px rgba(0, 0, 0, 0.15);
   
   /* Typography */
-  --font-family-primary: 'Segoe UI', sans-serif;
-  --font-family-heading: 'Comic Neue', cursive, sans-serif;
+  --font-family-primary: 'Quicksand', sans-serif;
+  --font-family-heading: 'Baloo 2', cursive;
   --font-size-xs: 0.9rem;
   --font-size-sm: 0.92rem;
   --font-size-base: 1rem;
@@ -408,7 +408,7 @@ body {
 }
 
 .shop-by-age h2 {
-  font-family: 'Comic Neue', cursive, sans-serif;
+  font-family: var(--font-family-heading);
   font-size: var(--font-size-3xl);
   margin-bottom: var(--space-xl);
   color: var(--primary-color);
@@ -485,7 +485,7 @@ body {
   font-size: var(--font-size-lg);
   margin: var(--space-md) 0 var(--space-sm);
   color: var(--primary-color);
-  font-family: 'Comic Neue', cursive;
+  font-family: var(--font-family-heading);
 }
 
 
@@ -499,7 +499,7 @@ body {
   overflow: hidden;
 }
 .shop-by-price h2 {
-  font-family: 'Comic Neue', cursive, sans-serif;
+  font-family: var(--font-family-heading);
   font-size: var(--font-size-3xl);
   margin-bottom: var(--space-xl);
   color: var(--primary-color);
@@ -568,7 +568,7 @@ body {
   font-size: var(--font-size-lg);
   margin: var(--space-md) 0 var(--space-sm);
   color: var(--primary-color);
-  font-family: 'Comic Neue', cursive;
+  font-family: var(--font-family-heading);
 }
 
 .shop-now-text {
